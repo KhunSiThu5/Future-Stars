@@ -1,0 +1,10 @@
+1725863965317	Move 'NewFile.jsp' to 'WEB-INF'
+1725863968898	Move 'NewFile.jsp' to 'webapp'
+1725864328072	Move 'CSS' to 'webapp'
+1725864334097	Move 'style.css' to 'CSS'
+1725864699931	Delete element
+1725864820544	Move 'articlePage.jsp' to 'WEB-INF'
+1725864832404	Rename resource 'homePage.jsp'
+1725864847307	Rename resource 'articlePage.jsp'
+1725864853825	Move 'homePage.jsp' to 'webapp'
+1725866562009	Rename resource 'side.jsp'
