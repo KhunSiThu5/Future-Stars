@@ -12,16 +12,16 @@
                     <h2>Video</h2>
                 </div>
 
-                <form action="" class="search-bar-con ms-3" method="post">
-                    <input placeholder="Search" type="text">
-                    <button><i class="fa-solid fa-magnifying-glass"></i></i></button>
+                <form action="videoFilter" class="search-bar-con ms-3" method="get">
+                    <input name="searchText" placeholder="Search" type="text">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
 
                 <div class=" navbar">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown ">
                             <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0 proImg">
-                                <img src="./IMAGE/profileImage.jpg" class=" avatar img-fluid rounded" alt="">
+                                <img src="" class=" avatar img-fluid rounded" alt="">
                             </a>
                             <!-- <div class="dropdown-menu dropdown-menu-end">
                                 <a href="#" class="dropdown-item">Profile</a>
@@ -35,169 +35,37 @@
 
             <main class="content px-3 py-2">
                 <div class="container-fluid box-container">
+                
+                <%
+                	for(Video v : list)
+                	{
+                		
+                	
+                %>
                     
                     <div class="box">
 
                         <div class="vid-con">
                             <a href="#"><i class="fa-solid fa-play" style="color: #ff7300;"></i></a>
-                            <video src="/Kids vocabulary - World food - Learn English for kids - English educational video.mp4"></video>
+                            <%-- <video controls src="getVideoFile?videoId=<%=v.getVideoId()%>"></video> --%>
+							<img src="./IMAGE/profileImage.jpg" alt="" />
                         </div>
 
                         <div class="vid-det">
-                            <h4>SOLAR SYSTEM - The Dr. Binocs Show - Best Learning Videos For Kids - Peekaboo Kidz</h4>
+                        	<p class="m-2"><%=v.getVideoType() %></p>
+                            <h4><%=v.getVidTitle() %></h4>
                             <div class="vid-btns">
                                 <button>
-                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a> <span>300</span>
+                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a> <span><%=v.getVidLike() %></span>
                                 </button>
-                                <span>600 view</span>
+                                <span><%=v.getVidView() %> view</span>
                             </div>
                         </div>
 
                     </div>
-                    <div class="box">
-
-                        <div class="vid-con">
-                            <a href="#"><i class="fa-solid fa-play" style="color: #ff7300;"></i></a>
-                            <video src="/Kids vocabulary - World food - Learn English for kids - English educational video.mp4"></video>
-                        </div>
-
-                        <div class="vid-det">
-                            <h4>SOLAR SYSTEM - The Dr. Binocs Show - Best Learning Videos For Kids - Peekaboo Kidz</h4>
-                            <div class="vid-btns">
-                                <button>
-                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a> <span>300</span>
-                                </button>
-                                <span>600 view</span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="box">
-
-                        <div class="vid-con">
-                            <a href="#"><i class="fa-solid fa-play" style="color: #ff7300;"></i></a>
-                            <video src="/Kids vocabulary - World food - Learn English for kids - English educational video.mp4"></video>
-                        </div>
-
-                        <div class="vid-det">
-                            <h4>SOLAR SYSTEM - The Dr. Binocs Show - Best Learning Videos For Kids - Peekaboo Kidz</h4>
-                            <div class="vid-btns">
-                                <button>
-                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a> <span>300</span>
-                                </button>
-                                <span>600 view</span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="box">
-
-                        <div class="vid-con">
-                            <a href="#"><i class="fa-solid fa-play" style="color: #ff7300;"></i></a>
-                            <video src="/Kids vocabulary - World food - Learn English for kids - English educational video.mp4"></video>
-                        </div>
-
-                        <div class="vid-det">
-                            <h4>SOLAR SYSTEM - The Dr. Binocs Show - Best Learning Videos For Kids - Peekaboo Kidz</h4>
-                            <div class="vid-btns">
-                                <button>
-                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a> <span>300</span>
-                                </button>
-                                <span>600 view</span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="box">
-
-                        <div class="vid-con">
-                            <a href="#"><i class="fa-solid fa-play" style="color: #ff7300;"></i></a>
-                            <video src="/Kids vocabulary - World food - Learn English for kids - English educational video.mp4"></video>
-                        </div>
-
-                        <div class="vid-det">
-                            <h4>SOLAR SYSTEM - The Dr. Binocs Show - Best Learning Videos For Kids - Peekaboo Kidz</h4>
-                            <div class="vid-btns">
-                                <button>
-                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a> <span>300</span>
-                                </button>
-                                <span>600 view</span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="box">
-
-                        <div class="vid-con">
-                            <a href="#"><i class="fa-solid fa-play" style="color: #ff7300;"></i></a>
-                            <video src="/Kids vocabulary - World food - Learn English for kids - English educational video.mp4"></video>
-                        </div>
-
-                        <div class="vid-det">
-                            <h4>SOLAR SYSTEM - The Dr. Binocs Show - Best Learning Videos For Kids - Peekaboo Kidz</h4>
-                            <div class="vid-btns">
-                                <button>
-                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a> <span>300</span>
-                                </button>
-                                <span>600 view</span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="box">
-
-                        <div class="vid-con">
-                            <a href="#"><i class="fa-solid fa-play" style="color: #ff7300;"></i></a>
-                            <video src="/Kids vocabulary - World food - Learn English for kids - English educational video.mp4"></video>
-                        </div>
-
-                        <div class="vid-det">
-                            <h4>SOLAR SYSTEM - The Dr. Binocs Show - Best Learning Videos For Kids - Peekaboo Kidz</h4>
-                            <div class="vid-btns">
-                                <button>
-                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a> <span>300</span>
-                                </button>
-                                <span>600 view</span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="box">
-
-                        <div class="vid-con">
-                            <a href="#"><i class="fa-solid fa-play" style="color: #ff7300;"></i></a>
-                            <video src="/Kids vocabulary - World food - Learn English for kids - English educational video.mp4"></video>
-                        </div>
-
-                        <div class="vid-det">
-                            <h4>SOLAR SYSTEM - The Dr. Binocs Show - Best Learning Videos For Kids - Peekaboo Kidz</h4>
-                            <div class="vid-btns">
-                                <button>
-                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a> <span>300</span>
-                                </button>
-                                <span>600 view</span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="box">
-
-                        <div class="vid-con">
-                            <a href="#"><i class="fa-solid fa-play" style="color: #ff7300;"></i></a>
-                            <video src="/Kids vocabulary - World food - Learn English for kids - English educational video.mp4"></video>
-                        </div>
-
-                        <div class="vid-det">
-                            <h4>SOLAR SYSTEM - The Dr. Binocs Show - Best Learning Videos For Kids - Peekaboo Kidz</h4>
-                            <div class="vid-btns">
-                                <button>
-                                    <a href="#"><i class="fa-solid fa-thumbs-up"></i></a> <span>300</span>
-                                </button>
-                                <span>600 view</span>
-                            </div>
-                        </div>
-
-                    </div>
+                    
+                    
+                 <%} %>
                    
                 </div>
             </main>

@@ -1,0 +1,12 @@
+package com.dao;
+
+public class MyConnection {
+	public class MyConnection {
+		  
+		  public Connection getConnection() throws ClassNotFoundException, SQLException {
+		    Class.forName("com.mysql.cj.jdbc.Driver");
+		    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/testdb","root","khun");
+		    
+		    return con;
+		  }
+}

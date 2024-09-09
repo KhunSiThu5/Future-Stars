@@ -1,0 +1,14 @@
+package com.dao;
+
+import com.model.Video;
+
+public class videoDao {
+	
+	public Video getAllVideo () {
+		
+		List<Video> list = ArrayList<Video>;
+		
+		return flag;
+	}
+
+}

@@ -1,0 +1,23 @@
+package com.dao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.model.Video;
+
+public class videoDao {
+	
+	public Video getAllVideo () throws ClassNotFoundException, SQLException {
+		
+		List<Video> list = new ArrayList<Video>();
+		
+		MyConnection conobj = new MyConnection();
+		Connection con = conobj.getConnection();
+		
+		 PreparedStatement pstm = con.prepareStatement("select * from videos");
+		return a;
+	}
+
+}

@@ -1,3 +1,7 @@
+<%@page import="com.dao.VideoDao"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="com.model.Video"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,10 +15,33 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/form.css" />
+    
 </head>
 
 <body>
-    <div class="wrapper">
+
+<%
+	VideoDao dao = new VideoDao();
+	
+	
+	if(session.getAttribute("vidList") == null)
+	{
+		List<Video> list = dao.getAllVideo();
+		session.setAttribute("vidList", list);
+		session.setAttribute("mainVidList", list);
+	} 
+	
+	
+	List<Video> list = (List<Video>) session.getAttribute("vidList");
+	
+	
+	
+	
+%>
+
+	
+       <div class="wrapper">
 
         <aside id="sidebar" class="js-sidebar">
             <!-- Content For Sidebar -->
@@ -38,34 +65,34 @@
                     </li>
                     
                     <li class="sidebar-item">
-                        <a href="videoPage.jsp" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
                             aria-expanded="false"><i class="fa-regular fa-circle-play pe-2"></i>
                             Video Page
                         </a>
                         <ul id="posts" class="sidebar-dropdown list-unstyled collapse ms-4" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
-                                <a href="videoPage.jsp" type="button" class="sidebar-link links">All</a>
+                                <a href="videoFilter?vidType=all" type="button" class="sidebar-link links main-link">All</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link links">Education</a>
+                                <a href="videoFilter?vidType=Education" class="sidebar-link links">Education</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link links">Music and Dance</a>
+                                <a href="videoFilter?vidType=Music and Dance" class="sidebar-link links">Music and Dance</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link links">Sports</a>
+                                <a href="videoFilter?vidType=Sports" class="sidebar-link links">Sports</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link links">Animated Stories</a>
+                                <a href="videoFilter?vidType=Animated Stories" class="sidebar-link links">Animated Stories</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link links">Arts and Crafts</a>
+                                <a href="videoFilter?vidType=Arts and Crafts" class="sidebar-link links">Arts and Crafts</a>
                             </li>
                         </ul>
                     </li>
 
                     <li class="sidebar-item">
-                        <a href="articlePage.jsp" class="sidebar-link links">
+                        <a href="#" class="sidebar-link links main-link">
                             <i class="fa-solid fa-book-open-reader pe-2"></i>
                             Article Page
                         </a>

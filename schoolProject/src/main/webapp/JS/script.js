@@ -31,10 +31,14 @@ if(isLight()){
 }
 
 
+// demo
+
 const link = document.querySelectorAll(".links");
 
+let loginUser = localStorage.getItem("loginUser");
 
 let linkClick = localStorage.getItem("linkClicked");
+
 
 if(linkClick!=null)
     { 
@@ -44,27 +48,18 @@ if(linkClick!=null)
 for(let i=0; i<link.length; i++)
 {
     link[i].addEventListener("click", ()=> {
-        link.forEach((e)=>{
+		link.forEach((e)=>{
             e.style.color = "";
         })
-
+		    
         link[i].style.color = "#ff7b00";
         localStorage.setItem("linkClicked", i);
     })
 }
 
-function n ()
-{
-    for(let i=0; i<link.length; i++)
-        {
-            link[i].addEventListener("click", ()=> {
-                link.forEach((e)=>{
-                    e.style.color = "";
-                })
-        
-                link[i].style.color = "#ff7b00";
-                localStorage.setItem("linkClicked", i);
 
-            })
-        }
-}
+
+
+
+
+

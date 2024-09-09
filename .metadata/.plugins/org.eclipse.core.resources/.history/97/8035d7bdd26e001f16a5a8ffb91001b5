@@ -1,0 +1,21 @@
+package com.dao;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.model.Video;
+
+public class videoDao {
+	
+	public Video getAllVideo () {
+		
+		List<Video> list = new ArrayList<Video>();
+		
+		MyConnection conobj = new MyConnection();
+		Connection con = conobj.getConnection();
+		
+		return con;
+	}
+
+}
